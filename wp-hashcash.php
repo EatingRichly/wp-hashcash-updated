@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: WordPress Hashcash Extended
- Plugin URI: http://azizmb.com/hashcash/
+ Plugin URI: http://azizmb.com/2012/04/wp-hashcash-now-working-on-newer-wordpress-versions/
  Description: Client-side javascript blocks all spam bots.  XHTML 1.1 compliant. Originally by Elliott Back, I fixed the admin submenu so it works on newer versions of WordPress.
  Author: Aziz B.
  Author URI: http://azizmb.com/

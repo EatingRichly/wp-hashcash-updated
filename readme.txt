@@ -13,7 +13,7 @@ Client-side javascript blocks all spam bots. XHTML 1.1 compliant. Now with suppo
 
 WP Hashcash is an antispam plugin that eradicates comment spam on Wordpress blogs. It works because your visitors must use obfuscated javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot. If the javascript check fails, WP Hashcash now gives you three options; it can either put the comment into moderation (default), put the comment in the akismet queue, or delete it.
 
-You can read more at the [WP Hashcash plugin](http://wordpress-plugins.feifei.us/hashcash/) page.  WP Hashcash is 100% GPL compatible.
+You can read more at the [WP Hashcash plugin](http://azizmb.com/2012/04/wp-hashcash-now-working-on-newer-wordpress-versions/) page.  WP Hashcash is 100% GPL compatible.
 
 = Features =
 
@@ -23,7 +23,7 @@ You can read more at the [WP Hashcash plugin](http://wordpress-plugins.feifei.us
 4. Widget support to display spam statistics and edit the configuration
 5. Works with IE, Firefox, and Safari
 6. 100% standards compliant XHTML 1.1, works with jQuery and Prototype
-7. Tested with Wordpres 2, Firefox, Safari, IE, and Chrome
+7. Tested with Wordpres 3, Firefox, Safari, IE, and Chrome
 8. Akismet compatibility
 
 = Limitations =
