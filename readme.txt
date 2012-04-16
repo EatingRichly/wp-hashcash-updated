@@ -23,7 +23,7 @@ You can read more at the [WP Hashcash plugin](http://azizmb.com/2012/04/wp-hashc
 4. Widget support to display spam statistics and edit the configuration
 5. Works with IE, Firefox, and Safari
 6. 100% standards compliant XHTML 1.1, works with jQuery and Prototype
-7. Tested with Wordpres 3, Firefox, Safari, IE, and Chrome
+7. Tested with Wordpress 3, Firefox, Safari, IE, and Chrome
 8. Akismet compatibility
 
 = Limitations =
