@@ -1,4 +1,4 @@
-=== WP-Hashcash ===
+=== WP-Hashcash Extended  ===
 Contributors: azizmb, ecb29, donncha
 Tags: spam, antispam, anti-spam, comments, comment, pingback, trackback, wp-hashcash, plugin, security, wordpress, javascript, js, signup, sign-up, wp-login.php, wp-signup.php, buddypress, bp, WPMU
 Tested up to: 3.3.1
