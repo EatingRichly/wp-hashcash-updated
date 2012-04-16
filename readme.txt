@@ -1,11 +1,11 @@
 === WP-Hashcash ===
-Contributors: ecb29, donncha, azizmb
+Contributors: azizmb, ecb29, donncha
 Tags: spam, antispam, anti-spam, comments, comment, pingback, trackback, wp-hashcash, plugin, security, wordpress, javascript, js, signup, sign-up, wp-login.php, wp-signup.php, buddypress, bp, WPMU
 Tested up to: 3.3.1
 Stable tag: 4.7
-Requires at least: 2.9.2
+Requires at least: 3.1
 
-Client-side javascript blocks all spam bots. XHTML 1.1 compliant.
+Client-side javascript blocks all spam bots. XHTML 1.1 compliant. Now with suppot for WordPress Versions 3.1+
 
 == Description ==
 
