@@ -5,7 +5,7 @@ Tested up to: 3.3.1
 Stable tag: 4.7
 Requires at least: 3.1
 
-Client-side javascript blocks all spam bots. XHTML 1.1 compliant. Now with suppot for WordPress Versions 3.1+
+Client-side javascript blocks all spam bots. XHTML 1.1 compliant. Now with support for WordPress Versions 3.1+
 
 == Description ==
 
