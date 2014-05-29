@@ -183,6 +183,7 @@ function wphc_admin_options() {
 	}
 	
 	// MAIN FORM
+/*
 	echo '<style type="text/css">
 		.wrap h3 { color: black; background-color: #e5f3ff; padding: 4px 8px; }
 
@@ -206,16 +207,16 @@ function wphc_admin_options() {
 
 		.clear { clear: both; }
 	</style>';
-
+*/
 	echo '<div class="wrap">';
 
-	echo '<div class="sidebar">';
+	echo '<div class="sidebar" style="border-right: 2px solid rgb(229, 243, 255); width: 200px; float: left; padding: 0px 20px 0px 10px; margin: 0px 20px 0px 0px;">';
 
-	echo '<h3>Statistics</h3>';
+	echo '<h3 style="color: black; background-color: rgb(229, 243, 255); padding: 4px 8px;" >Statistics</h3>';
 	echo '<p>'.widget_ratio($options).'</p>';
 	echo '</div>';
 
-	echo '<div class="main">';
+	echo '<div class="main" style="float: left; width: 600px;">';
 	echo '<h2>WordPress Hashcash</h2>';
 	echo '<p>This is an antispam plugin that eradicates spam signups on WordPress sites. It works because your visitors must use obfuscated
 	javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot.';
