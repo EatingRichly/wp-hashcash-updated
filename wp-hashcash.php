@@ -208,7 +208,7 @@ function wphc_admin_options() {
 	</style>';
 
 	echo '<div class="wrap">';
-
+/*
 	echo '<div class="sidebar">';
 	echo '<h3>Plugin</h3>';
 	echo '<ul>
@@ -230,6 +230,7 @@ function wphc_admin_options() {
 	<li><a href="http://wordpress-plugins.feifei.us/">Elliott\'s WP Plugins</a></li>
 	<li><a href="http://ocaoimh.ie/wordpress-plugins/">Donncha\'s WP Plugins</a></li>
 	</ul>';
+*/    
 	echo '<h3>Statistics</h3>';
 	echo '<p>'.widget_ratio($options).'</p>';
 	echo '</div>';
@@ -237,8 +238,7 @@ function wphc_admin_options() {
 	echo '<div class="main">';
 	echo '<h2>WordPress Hashcash</h2>';
 	echo '<p>This is an antispam plugin that eradicates spam signups on WordPress sites. It works because your visitors must use obfuscated
-	javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot.  You can read more about it on the 
-	<a href="http://wordpress-plugins.feifei.us/hashcash/">WordPress Hashcash plugin page</a> of my site.</p>';
+	javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot.';
 
 	echo '<h3>Standard Options</h3>';
 	echo '<form method="POST" action="?page=' . $_GET[ 'page' ] . '&updated=true">';
@@ -301,11 +301,11 @@ function wphc_admin_options() {
 	echo '<input type="submit" id="wphc-submit-override" name="wphc-submit-override" value="Save WP Hashcash Settings"/>';
 	echo '</form>';
 	echo '</div>';
-
+/*
 	echo '<div class="clear">';
 	echo '<p style="text-align: center; font-size: .85em;">&copy; Copyright '.date('Y').' <a href="http://elliottback.com">Elliott B&auml;ck</a></p>';
 	echo '</div>';
-
+*/
 	echo '</div>';
 }
 
