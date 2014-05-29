@@ -42,7 +42,7 @@ If you are upgrading from a previous version of WP-Hashcash, please disabled the
 
 == Screenshots ==
 
-1. Wordpress Hashcash Options Screen
+1. Hashcash Updated Options Screen
 
 == Testimonials ==
 
