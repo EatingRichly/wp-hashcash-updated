@@ -15,6 +15,13 @@ Hashcash Updated is an antispam plugin that eradicates comment spam on Wordpress
 
 Hashcash Updated is 100% GPL compatible.
 
+= History =
+This plugin started out 9 years ago by Elliott Back (ecb29) with the name WP-Hashcash, later down the road Donncha Ó Caoimh (donncha) started helping with development. In February 2011 the plugin was abanondoned and did not recive any more updates.
+
+In April 2012 (azizmb) forked WP-Hashcash and released it under the name WP-Hashcash Extended fixing the problem with not being able to change the settings in the origional plugin. After the update in April it did not recieve any more updates.
+
+In May 2014 Eric Johnson (wormeyman) forked WP-Hashcash Extended from the GitHub WordPress plugins mirror and renamed it [Hashcash Updated](https://github.com/wormeyman/wp-hashcash-updated), Pull Requests are encouraged!
+
 = Features =
 
 1. Blocks all comment spam, but not real comments
