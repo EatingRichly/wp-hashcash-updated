@@ -210,26 +210,7 @@ function wphc_admin_options() {
 	echo '<div class="wrap">';
 
 	echo '<div class="sidebar">';
-	echo '<h3>Plugin</h3>';
-	echo '<ul>
-	<li><a href="http://wordpress-plugins.feifei.us/hashcash/">Plugin\'s Homepage</a></li>';
-	if( function_exists( 'is_super_admin' ) && is_super_admin() ) {
-		echo '<li><a href="http://mu.wordpress.org/forums/">WordPress MU Forums</a></li>';
-	}
-	echo '<li><a href="http://wordpress.org/tags/wp-hashcash">Plugin Support Forum</a></li>';
-	echo '</ul>';		
-	echo '<h3>Donation</h3>';
-	echo '<center><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input style="border:none;" type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----"></form></center>';
-	echo '<p>Any small donation would be highly appreciated.</p>';
-	echo '<h3>Miscellaneous</h3>';
-	echo '<ul>
-	<li><a href="http://wordpress-plugins.feifei.us/">Elliott\'s WP Plugins</a></li>
-	<li><a href="http://ocaoimh.ie/wordpress-plugins/">Donncha\'s WP Plugins</a></li>
-	</ul>';
+
 	echo '<h3>Statistics</h3>';
 	echo '<p>'.widget_ratio($options).'</p>';
 	echo '</div>';
