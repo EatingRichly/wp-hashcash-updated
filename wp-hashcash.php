@@ -245,7 +245,7 @@ function wphc_admin_options() {
 	$refresh = htmlspecialchars($options['refresh'], ENT_QUOTES);
 	echo '<p><label for="wphc-refresh">' . __('Key Expiry:', 'wp-hashcash').'</label>
 		<input style="width: 200px;" id="wphc-refresh" name="wphc-refresh" type="text" value="'.$refresh.'" />
-		<br/><span style="color: grey; font-size: 90%;">Default is one week, or <strong>604800</strong> seconds.</p>';
+		<br/><span style="color: grey; font-size: 90%;">Default is one week, or <strong>604800</strong> seconds.</span></p>';
 
 	// current key
 	echo '<p>Your current key is <strong>' . $options['key'][count($options['key']) - 1] . '</strong>.';
