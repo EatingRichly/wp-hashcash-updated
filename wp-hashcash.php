@@ -128,10 +128,10 @@ function widget_ratio($options){
 	$ratio = get_spam_ratio( $ham, $spam );
 	$signups_ratio = get_spam_ratio( $signups_ham, $signups_spam );
 
-	$msg = "<li><span>$spam spam comments blocked out of $ham human comments.  " . $ratio ."% of your comments are spam!</span></li>";
+	$msg = "<span>$spam spam comments blocked out of $ham human comments.  " . $ratio ."% of your comments are spam!</span>";
 
 	if( $signups_ham && $signups_spam )
-		$msg = "<li><span>$signups_spam spam signups blocked out of $signups_ham human signups.  " . $signups_ratio ."% of your signups are spam!</span></li>";
+		$msg = "<span>$signups_spam spam signups blocked out of $signups_ham human signups.  " . $signups_ratio ."% of your signups are spam!</span>";
 
 	return $msg;
 }
