@@ -2,7 +2,7 @@
 /*
  Plugin Name: Hashcash Updated
  Plugin URI: https://github.com/wormeyman/wp-hashcash-extended
- Description: Client-side javascript blocks all spam bots.  XHTML 1.1 compliant. Originally by Elliott Back, I fixed the admin submenu so it works on newer versions of WordPress. Eric fixed the depreciated funcion.
+ Description: Client-side javascript blocks all spam bots.  HTML5 compliant. Originally by Elliott Back, I fixed the admin submenu so it works on newer versions of WordPress. Eric fixed the depreciated funcion.
  Author: Eric J.
  Author URI: https://twitter.com/wormeyman/
  Version: 5.0

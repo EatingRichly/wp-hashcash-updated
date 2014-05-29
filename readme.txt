@@ -3,17 +3,17 @@ Contributors: azizmb, ecb29, donncha, wormeyman
 Tags: spam, antispam, anti-spam, comments, comment, pingback, trackback, wp-hashcash, plugin, security, wordpress, javascript, js, signup, sign-up, wp-login.php, wp-signup.php, buddypress, bp, WPMU
 Tested up to: 3.9.1
 Stable tag: 5.0
-Requires at least: 3.9
+Requires at least: 3.8
 
-Client-side javascript blocks all spam bots. XHTML 1.1 compliant. Now with support for WordPress Versions 3.1+
+Client-side javascript blocks all spam bots. HTML5 compliant. Now with support for WordPress Versions 3.1+
 
 == Description ==
 
 = No More Spam =
 
-WP Hashcash is an antispam plugin that eradicates comment spam on Wordpress blogs. It works because your visitors must use obfuscated javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot. If the javascript check fails, WP Hashcash now gives you three options; it can either put the comment into moderation (default), put the comment in the akismet queue, or delete it.
+Hashcash Updated is an antispam plugin that eradicates comment spam on Wordpress blogs. It works because your visitors must use obfuscated javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot. If the javascript check fails, Hashcash Updated now gives you three options; it can either put the comment into moderation (default), put the comment in the akismet queue, or delete it.
 
-WP Hashcash is 100% GPL compatible.
+Hashcash Updated is 100% GPL compatible.
 
 = Features =
 
@@ -22,19 +22,19 @@ WP Hashcash is 100% GPL compatible.
 3. Also protects signup pages for Wordpress (WP), BuddyPress (BP), and Wordpress Multi-User (WPMU)
 4. Widget support to display spam statistics and edit the configuration
 5. Works with IE, Firefox, and Safari
-6. 100% standards compliant XHTML 1.1, works with jQuery and Prototype
+6. 100% standards compliant HTML5, works with jQuery and Prototype
 7. Tested with Wordpress 3, Firefox, Safari, IE, and Chrome
 8. Akismet compatibility
 
 = Limitations =
 
-WP Hashcash relies on the presence of two hooks in your theme, `wp_head` and `comment_form`. If your theme doesn't include these actions, you will need to add them immediately before the end head and end form tags respectively.
+Hashcash Updated relies on the presence of two hooks in your theme, `wp_head` and `comment_form`. If your theme doesn't include these actions, you will need to add them immediately before the end head and end form tags respectively.
 
 == Installation ==
 
 = Installation Instructions =
 
-To install WP Hashcash, please download the plugin and unzip it, then copy the wp-hashcash.php file to wp-content/plugins. Activate the plugin and drag into your Widgetized sidebar for public statistics, or visit Options, WP Hashcash from the admin panel to configure options.
+To install Hashcash Updated, please download the plugin and unzip it, then copy the wp-hashcash.php file to wp-content/plugins. Activate the plugin and drag into your Widgetized sidebar for public statistics, or visit Options, Hashcash Updated from the admin panel to configure options.
 
 = Notes =
 
@@ -58,11 +58,14 @@ If you are upgrading from a previous version of WP-Hashcash, please disabled the
 
 == Upgrade Notice ==
 = 5.0 =
-Fixed Depreciated Funcions
+Fixed Depreciated Funcions & Made the code truly HTML5 compliant.
 
 == Changelog ==
 = 5.0 =
-Fixed Depreciated Funcions
+* Forked from wp-hashcash-extended
+* Fixed Depreciated Funcions
+* Updated code to be HTML5 complaint.
+
 = 4.7 =
 * Fixed capability for WordPress 3.1+
 
