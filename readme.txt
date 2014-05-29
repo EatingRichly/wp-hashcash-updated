@@ -1,9 +1,9 @@
 === WP-Hashcash Extended  ===
-Contributors: azizmb, ecb29, donncha
+Contributors: azizmb, ecb29, donncha, wormeyman
 Tags: spam, antispam, anti-spam, comments, comment, pingback, trackback, wp-hashcash, plugin, security, wordpress, javascript, js, signup, sign-up, wp-login.php, wp-signup.php, buddypress, bp, WPMU
-Tested up to: 3.3.1
-Stable tag: 4.7
-Requires at least: 3.1
+Tested up to: 3.9.1
+Stable tag: 5.0
+Requires at least: 3.9
 
 Client-side javascript blocks all spam bots. XHTML 1.1 compliant. Now with support for WordPress Versions 3.1+
 
@@ -57,11 +57,12 @@ If you are upgrading from a previous version of WP-Hashcash, please disabled the
 * "I haven't had anything to 'deal' with in several weeks. That's a nice thing. I've also had a bunch of folks leave legitimate comments that have gotten through. It's all good."
 
 == Upgrade Notice ==
-
-= 4.7 =
-Fixed capability for WordPress 3.1+
+= 5.0 =
+Fixed Depreciated Funcions
 
 == Changelog ==
+= 5.0 =
+Fixed Depreciated Funcions
 = 4.7 =
 * Fixed capability for WordPress 3.1+
 
