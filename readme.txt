@@ -1,4 +1,4 @@
-=== WP-Hashcash Extended  ===
+=== WP-Hashcash Updated ===
 Contributors: azizmb, ecb29, donncha, wormeyman
 Tags: spam, antispam, anti-spam, comments, comment, pingback, trackback, wp-hashcash, plugin, security, wordpress, javascript, js, signup, sign-up, wp-login.php, wp-signup.php, buddypress, bp, WPMU
 Tested up to: 3.9.1
@@ -13,7 +13,7 @@ Client-side javascript blocks all spam bots. XHTML 1.1 compliant. Now with suppo
 
 WP Hashcash is an antispam plugin that eradicates comment spam on Wordpress blogs. It works because your visitors must use obfuscated javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot. If the javascript check fails, WP Hashcash now gives you three options; it can either put the comment into moderation (default), put the comment in the akismet queue, or delete it.
 
-You can read more at the [WP Hashcash plugin](http://azizmb.com/2012/04/wp-hashcash-now-working-on-newer-wordpress-versions/) page.  WP Hashcash is 100% GPL compatible.
+WP Hashcash is 100% GPL compatible.
 
 = Features =
 
