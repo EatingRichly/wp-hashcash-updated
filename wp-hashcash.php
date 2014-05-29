@@ -221,7 +221,7 @@ function wphc_admin_options() {
 	javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot.';
 
 	echo '<h3>Standard Options</h3>';
-	echo '<form method="POST" action="?page=' . $_GET[ 'page' ] . '&updated=true">';
+	echo '<form method="POST" action="?page=' . $_GET[ 'page' ] . '&amp;updated=true">';
 	wp_nonce_field('wphc-options');
 	if( function_exists( 'is_super_admin' ) ) { // MU only
 		$signup_active = (int)$options[ 'signup_active' ];
