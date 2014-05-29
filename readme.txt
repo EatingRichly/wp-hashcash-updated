@@ -26,17 +26,27 @@ In May 2014 Eric Johnson (wormeyman) forked WP-Hashcash Extended from the GitHub
 = Features =
 
 1. Blocks all comment spam, but not real comments
-2. Also prevents most trackback / pingback spam
-3. Also protects signup pages for Wordpress (WP), BuddyPress (BP), and Wordpress Multi-User (WPMU)
-4. Widget support to display spam statistics and edit the configuration
-5. Works with IE, Firefox, and Safari
-6. 100% standards compliant HTML5, works with jQuery and Prototype
-7. Tested with Wordpress 3, Firefox, Safari, IE, and Chrome
-8. Akismet compatibility
+1. Also prevents most trackback / pingback spam
+1. Also protects signup pages for Wordpress (WP), BuddyPress (BP), and Wordpress Multi-User (WPMU)
+1. Widget support to display spam statistics and edit the configuration
+1. Works with IE, Firefox, and Safari
+1. 100% standards compliant HTML5, works with jQuery and Prototype
+1. Tested with Wordpress 3, Firefox, Safari, IE, and Chrome
+1. Akismet compatibility
 
 = Limitations =
 
 Hashcash Updated relies on the presence of two hooks in your theme, `wp_head` and `comment_form`. If your theme doesn't include these actions, you will need to add them immediately before the end head and end form tags respectively.
+== Frequently Asked Questions ==
+
+= Can you add a Whitelist for IP addresses? =
+I do not know how to do this but if someone would like to help that would be awesome!
+
+= Please update this plugin =
+I have!
+
+= Will this work with a 3rd party commenting service like Disqus? =
+No this will not, however they have their own anti-spam technology.
 
 == Installation ==
 
