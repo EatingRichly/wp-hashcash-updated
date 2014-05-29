@@ -302,10 +302,6 @@ function wphc_admin_options() {
 	echo '</form>';
 	echo '</div>';
 
-	echo '<div class="clear">';
-	echo '<p style="text-align: center; font-size: .85em;">&copy; Copyright '.date('Y').' <a href="http://elliottback.com">Elliott B&auml;ck</a></p>';
-	echo '</div>';
-
 	echo '</div>';
 }
 
