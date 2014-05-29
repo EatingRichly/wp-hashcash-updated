@@ -5,6 +5,7 @@ Tested up to: 3.9.1
 Stable tag: 5.0
 Requires at least: 3.8
 License: GPLv2 or later
+Donate link: http://wormeyman.com
 
 Client-side javascript blocks all spam bots. HTML5 compliant. Now with support for WordPress Versions 3.1+
 
