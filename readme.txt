@@ -7,6 +7,7 @@ Requires at least: 3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: http://wormeyman.com
+GitHub Plugin URI: https://github.com/wormeyman/wp-hashcash-updated
 
 Client-side javascript blocks all spam bots. HTML5 compliant. Now with support for WordPress Versions 3.1+
 
