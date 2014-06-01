@@ -279,7 +279,7 @@ function wphc_admin_options() {
         check into the comment body.  Works only if moderation / akismet mode is enabled.</span></p>';
 
     echo '<input type="hidden" id="wphc-submit" name="wphc-submit" value="1" />';
-    echo '<input type="submit" class="button button-primary" id="wphc-submit-override" name="wphc-submit-override" value="Save WP Hashcash Settings"/>';
+    echo '<input type="submit" class="button-primary" id="wphc-submit-override" name="wphc-submit-override" value="Save WP Hashcash Settings"/>';
     echo '</form>';
     echo '</div>';
 
