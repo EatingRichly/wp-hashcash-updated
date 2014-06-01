@@ -221,7 +221,7 @@ function wphc_admin_options() {
     echo '<div class="main" style="float: left; width: 600px;">';
     echo '<h2>WordPress Hashcash</h2>';
     echo '<p>This is an antispam plugin that eradicates spam signups on WordPress sites. It works because your visitors must use obfuscated
-    javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot.';
+    javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot. TEST';
 
     echo '<h3>Standard Options</h3>';
     echo '<form method="POST" action="?page=' . $_GET[ 'page' ] . '&amp;updated=true">';
