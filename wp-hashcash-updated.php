@@ -150,9 +150,9 @@ function wphc_add_options_to_admin() {
 
     if (function_exists('add_options_page')) {
         if( function_exists( 'is_super_admin' ) ) {
-            add_submenu_page('options-general.php', __('WordPress Hashcash'), __('WordPress Hashcash'), 'manage_options', 'wphc_admin', 'wphc_admin_options');
+            add_submenu_page('options-general.php', __('Hashcash Updated'), __('Hashcash Updated'), 'manage_options', 'wphc_admin', 'wphc_admin_options');
         } else {
-            add_options_page('Wordpress Hashcash', 'Wordpress Hashcash', 8, basename(__FILE__), 'wphc_admin_options');
+            add_options_page('Hashcash Updated', 'Hashcash Updated', 8, basename(__FILE__), 'wphc_admin_options');
         }
     }
 }
@@ -219,7 +219,7 @@ function wphc_admin_options() {
     echo '</div>';
 
     echo '<div class="main" style="float: left; width: 600px;">';
-    echo '<h2>WordPress Hashcash</h2>';
+    echo '<h2>Hashcash Updated</h2>';
     echo '<p>This is an antispam plugin that eradicates spam signups on WordPress sites. It works because your visitors must use obfuscated
     javascript to submit a proof-of-work that indicates they opened your website in a web browser, not a robot.';
 
@@ -281,7 +281,7 @@ function wphc_admin_options() {
         check into the comment body.  Works only if moderation / akismet mode is enabled.</span></p>';
 
     echo '<input type="hidden" id="wphc-submit" name="wphc-submit" value="1" />';
-    echo '<input type="submit" class="button-primary" id="wphc-submit-override" name="wphc-submit-override" value="Save WP Hashcash Settings"/>';
+    echo '<input type="submit" class="button-primary" id="wphc-submit-override" name="wphc-submit-override" value="Save Hashcash Updated Settings"/>';
     echo '</form>';
     echo '</div>';
 
@@ -488,7 +488,7 @@ function wphc_add_commentform(){
     }
     
     echo '<div><input type="hidden" id="wphc_value" name="wphc_value" value=""/></div>';
-    echo '<noscript><div><small>Wordpress Hashcash needs javascript to work, but your browser has javascript disabled. Your comment will be '.$verb.'!</small></div></noscript>';
+    echo '<noscript><div><small>Hashcash Updated needs javascript to work, but your browser has javascript disabled. Your comment will be '.$verb.'!</small></div></noscript>';
 }
 
 add_action('comment_form', 'wphc_add_commentform');
@@ -568,7 +568,7 @@ function wphc_check_hidden_tag($comment) {
             $ipv = $server_ip != $web_ip;
             $spam = $spam || ($ipv);
             
-            if($options['logging'] && $ipv) $comment['comment_content'] .= "\n\n[WORDPRESS HASHCASH] The comment's server IP (".$server_ip.") doesn't match the"
+            if($options['logging'] && $ipv) $comment['comment_content'] .= "\n\n[Hashcash Updated] The comment's server IP (".$server_ip.") doesn't match the"
                 . " comment's URL host IP (".$web_ip.") and so is spam.";
         }
 
@@ -594,20 +594,20 @@ function wphc_check_hidden_tag($comment) {
                 }
                 
                 if($options['logging'] && !$found) 
-                    $comment['comment_content'] .= "\n\n[WORDPRESS HASHCASH] The comment's actual post text did not contain your blog url (".$permalink.") and so is spam.";
+                    $comment['comment_content'] .= "\n\n[Hashcash Updated] The comment's actual post text did not contain your blog url (".$permalink.") and so is spam.";
                 
                 $spam = $spam || !$found;
             } else {
                 $spam = true;
                 if($options['logging']) 
-                    $comment['comment_content'] .= "\n\n[WORDPRESS HASHCASH] Snoopy failed to fetch results for the comment blog url (".$comment['comment_author_url'].") with error '".$snoop->error."' and so is spam.";
+                    $comment['comment_content'] .= "\n\n[Hashcash Updated] Snoopy failed to fetch results for the comment blog url (".$comment['comment_author_url'].") with error '".$snoop->error."' and so is spam.";
             }
         }
     } else {
         // Check the wphc values against the last five keys
         $spam = !in_array($_POST["wphc_value"], $options['key']);
         if($options['logging'] && $spam)
-            $comment['comment_content'] .= "\n\n[WORDPRESS HASHCASH] The poster sent us '".intval($_POST["wphc_value"])." which is not a hashcash value.";
+            $comment['comment_content'] .= "\n\n[Hashcash Updated] The poster sent us '".intval($_POST["wphc_value"])." which is not a hashcash value.";
     }
     
     if($spam){
