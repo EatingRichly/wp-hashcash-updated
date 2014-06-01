@@ -87,7 +87,7 @@ Fixed Depreciated Funcions & Made the code truly HTML5 compliant.
 
 = 5.0 =
 * Forked from wp-hashcash-extended
-* Fixed Depreciated Funcions
+* Fixed Depreciated Functions
 * Updated code to be HTML5 complaint.
 
 = 4.7 =
