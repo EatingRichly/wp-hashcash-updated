@@ -8,6 +8,7 @@
  Version: 5.1
  Donate link: http://wormeyman.com
  GitHub Plugin URI: https://github.com/wormeyman/wp-hashcash-updated
+ GitHub Branch: master
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
