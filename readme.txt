@@ -82,6 +82,9 @@ If you are upgrading from a previous version of WP-Hashcash, please disabled the
 Fixed Depreciated Funcions & Made the code truly HTML5 compliant.
 
 == Changelog ==
+= 5.1 =
+* Add WordPress 3.8 styles
+
 = 5.0 =
 * Forked from wp-hashcash-extended
 * Fixed Depreciated Funcions
