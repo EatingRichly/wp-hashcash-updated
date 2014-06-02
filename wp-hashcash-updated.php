@@ -5,7 +5,7 @@
  Description: Client-side javascript blocks all spam bots. HTML5 compliant.
  Author: Eric J.
  Author URI: https://twitter.com/wormeyman/
- Version: 5.1.2
+ Version: 5.2
  Donate link: http://wormeyman.com
  GitHub Plugin URI: https://github.com/wormeyman/wp-hashcash-updated
  GitHub Branch: master

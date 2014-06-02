@@ -1,5 +1,8 @@
 # Changelog
 
+## 5.2
+* Add Settings right on the plugin page.
+
 ## 5.1
 * Add WordPress 3.8 styles
 
