@@ -82,8 +82,8 @@ function wphc_install () {
     wphc_refresh();
 }
 
-add_action('activate_wp-hashcash/wp-hashcash.php', 'wphc_install');
-add_action('activate_wp-hashcash.php', 'wphc_install');
+add_action('activate_wp-hashcash/wp-hashcash-updated.php', 'wphc_install');
+add_action('activate_wp-hashcash-updated.php', 'wphc_install');
 
 /**
  * Update the key, if needed
