@@ -5,7 +5,7 @@
  Description: Client-side javascript blocks all spam bots. HTML5 compliant.
  Author: Eric J.
  Author URI: https://twitter.com/wormeyman/
- Version: 5.1.1
+ Version: 5.1.2
  Donate link: http://wormeyman.com
  GitHub Plugin URI: https://github.com/wormeyman/wp-hashcash-updated
  GitHub Branch: master
@@ -634,6 +634,18 @@ function wphc_check_hidden_tag($comment) {
     
     return $comment;
 }
+
+// Add settings link on plugin page
+function plugin_settings_link($links) { 
+  $settings_link = '<a href="options-general.php?page=wphc_admin">Settings</a>'; 
+  array_unshift($links, $settings_link); 
+  return $links; 
+}
+ 
+$plugin = plugin_basename(__FILE__); 
+
+add_filter("plugin_action_links_$plugin", 'plugin_settings_link' );
+//end
 
 add_filter('preprocess_comment', 'wphc_check_hidden_tag');
 ?>
