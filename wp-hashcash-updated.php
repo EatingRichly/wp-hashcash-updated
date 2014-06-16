@@ -1,13 +1,13 @@
 <?php
 /*
  Plugin Name: Hashcash Updated
- Plugin URI: https://github.com/wormeyman/wp-hashcash-updated
+ Plugin URI: https://github.com/EatingRichly/wp-hashcash-updated/
  Description: Client-side javascript blocks all spam bots. HTML5 compliant.
  Author: Eric J.
  Author URI: https://twitter.com/wormeyman/
  Version: 5.2.2
- Donate link: http://wormeyman.com
- GitHub Plugin URI: https://github.com/wormeyman/wp-hashcash-updated
+ Donate link: http://eatingrichly.com
+ GitHub Plugin URI: https://github.com/EatingRichly/wp-hashcash-updated/
  GitHub Branch: master
 
  This program is free software; you can redistribute it and/or modify
