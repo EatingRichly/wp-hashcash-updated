@@ -23,7 +23,7 @@
  */
 
 if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-    
+
 function wphc_option($save = false){
     if($save) {
         if( function_exists( 'update_site_option' ) ) {
@@ -64,14 +64,14 @@ function wphc_install () {
     $options['signup_active'] = 1;
     $options['comments_active'] = 1;
     $options['attribution'] = 1;
-    
+
     // akismet compat check
     if(function_exists('akismet_init')){
         $options['moderation'] = 'akismet';
     } else {
         $options['moderation'] = 'moderate';
     }
-    
+
     // validate ip / url
     $options['validate-ip'] = true;
     $options['validate-url'] = true;
@@ -186,7 +186,7 @@ function wphc_admin_options() {
         $options['comments_active'] = (int) $_POST['comments_active'];
         wphc_option($options);
     }
-    
+
     // MAIN FORM
 /*
     echo '<style type="text/css">
@@ -264,14 +264,14 @@ function wphc_admin_options() {
 
     $validate_ip = htmlspecialchars($options['validate-ip'], ENT_QUOTES);
     echo '<p><label for="wphc-validate-ip">Validate IP Address</label>
-        <input name="wphc-validate-ip" type="checkbox" id="wphc-validate-ip"'.($validate_ip?' checked':'').'/> 
+        <input name="wphc-validate-ip" type="checkbox" id="wphc-validate-ip"'.($validate_ip?' checked':'').'/>
         <br /><span style="color: grey; font-size: 90%;">
         Checks if the IP address of the trackback sender is equal to the IP address of the webserver the trackback URL is referring to.</span></p>';
 
     $validate_url = htmlspecialchars($options['validate-url'], ENT_QUOTES);
     echo '<p><label for="wphc-validate-url">Validate URL</label>
-        <input name="wphc-validate-url" type="checkbox" id="wphc-validate-url"'.($validate_url?' checked':'').'/> 
-        <br /><span style="color: grey; font-size: 90%;">Retrieves the web page located at the URL included 
+        <input name="wphc-validate-url" type="checkbox" id="wphc-validate-url"'.($validate_url?' checked':'').'/>
+        <br /><span style="color: grey; font-size: 90%;">Retrieves the web page located at the URL included
         in the trackback to check if it contains a link to your blog.  If it does not, it is spam!</span></p>';
 
     // logging options
@@ -279,7 +279,7 @@ function wphc_admin_options() {
 
     $logging = htmlspecialchars($options['logging'], ENT_QUOTES);
     echo '<p><label for="wphc-logging">Logging</label>
-        <input name="wphc-logging" type="checkbox" id="wphc-logging"'.($logging?' checked':'').'/> 
+        <input name="wphc-logging" type="checkbox" id="wphc-logging"'.($logging?' checked':'').'/>
         <br /><span style="color: grey; font-size: 90%;">Logs the reason why a given comment failed the spam
         check into the comment body.  Works only if moderation / akismet mode is enabled.</span></p>';
 
@@ -330,7 +330,7 @@ function wphc_addhead() {
       window.onload = function() {
         if (oldonload)
           oldonload();
-        
+
         func();
       }
     }
@@ -354,12 +354,12 @@ function wphc_getjs(){
             $inc = rand($val / 100, $val - 1);
             $n = floor($val / $inc);
             $r = $val % $inc;
-        
+
             $js .= "var wphc_eax = $inc; ";
             for($i = 0; $i < $n - 1; $i++){
                 $js .= "wphc_eax += $inc; ";
             }
-            
+
             $js .= "wphc_eax += $r; ";
             $js .= 'return wphc_eax; ';
             break;
@@ -378,9 +378,9 @@ function wphc_getjs(){
             $js .= 'wphc_ecx++; ';
             $js .= '} ';
             $js .= 'return wphc_ebx;';
-            
+
         break;
-        
+
         /* Multiplication of square roots:
         Time guarantee:  constant time */
         case 2:
@@ -388,79 +388,79 @@ function wphc_getjs(){
             $r = $val - ($sqrt * $sqrt);
             $js .= "return $sqrt * $sqrt + $r; ";
         break;
-        
+
         /* Sum of random numbers to the final value:
         Time guarantee:  log(n) expected value */
         case 3:
             $js .= 'return ';
-    
+
             $i = 0;
             while($val > 0){
                 if($i++ > 0)
                     $js .= '+';
-                
+
                 $temp = rand(1, $val);
                 $val -= $temp;
                 $js .= $temp;
             }
-    
+
             $js .= ';';
         break;
     }
-        
+
     $js .= '} wphc_compute();';
-    
+
     // pack bytes
     if( !function_exists( 'strToLongs' ) ) {
     function strToLongs($s) {
         $l = array();
-        
+
         // pad $s to some multiple of 4
         $s = preg_split('//', $s, -1, PREG_SPLIT_NO_EMPTY);
-        
+
         while(count($s) % 4 != 0){
             $s [] = ' ';
         }
-    
+
         for ($i = 0; $i < ceil(count($s)/4); $i++) {
             $l[$i] = ord($s[$i*4]) + (ord($s[$i*4+1]) << 8) + (ord($s[$i*4+2]) << 16) + (ord($s[$i*4+3]) << 24);
             }
-    
+
         return $l;
     }
     }
-    
+
     // xor all the bytes with a random key
     $key = rand(21474836, 2126008810);
     $js = strToLongs($js);
-    
+
     for($i = 0; $i < count($js); $i++){
         $js[$i] = $js[$i] ^ $key;
     }
-    
+
     // libs function encapsulation
     $libs = "function wphc(){\n";
-    
+
     // write bytes to javascript, xor with key
     $libs .= "\tvar wphc_data = [".join(',',$js)."]; \n";
-    
+
     // do the xor with key
     $libs .= "\n\tfor (var i=0; i<wphc_data.length; i++){\n";
     $libs .= "\t\twphc_data[i]=wphc_data[i]^$key;\n";
     $libs .= "\t}\n";
-    
+
     // convert bytes back to string
     $libs .= "\n\tvar a = new Array(wphc_data.length); \n";
     $libs .= "\tfor (var i=0; i<wphc_data.length; i++) { \n";
     $libs .= "\t\ta[i] = String.fromCharCode(wphc_data[i] & 0xFF, wphc_data[i]>>>8 & 0xFF, ";
     $libs .= "wphc_data[i]>>>16 & 0xFF, wphc_data[i]>>>24 & 0xFF);\n";
     $libs .= "\t}\n";
-    
+
     $libs .= "\n\treturn eval(a.join('')); \n";
-    
+
     // call libs function
     $libs .= "}";
-    
+
     // return code
     return $libs;
 }
@@ -476,7 +476,7 @@ add_action('bp_after_registration_submit_buttons', 'wphc_add_signupform');
 
 function wphc_add_commentform(){
     $options = wphc_option();
-    
+
     switch($options['moderation']){
         case 'delete':
             $verb = 'deleted';
@@ -489,7 +489,7 @@ function wphc_add_commentform(){
             $verb = 'placed in moderation';
             break;
     }
-    
+
     echo '<div><input type="hidden" id="wphc_value" name="wphc_value" value=""/></div>';
     echo '<noscript><div><small>Hashcash Updated needs javascript to work, but your browser has javascript disabled. Your comment will be '.$verb.'!</small></div></noscript>';
 }
@@ -509,7 +509,7 @@ function wphc_check_signup_hidden_tag( $result ) {
 
     // Check the wphc values against the last five keys
     $spam = !in_array($_POST["wphc_value"], $options['key']);
-    
+
     if($spam){
         $options['signups-spam'] = ((int) $options['signups-spam']) + 1;
         wphc_option($options);
@@ -518,7 +518,7 @@ function wphc_check_signup_hidden_tag( $result ) {
         $options['signups-ham'] = ((int) $options['signups-ham']) + 1;
         wphc_option($options);
     }
-    
+
     return $result;
 }
 
@@ -557,7 +557,7 @@ function wphc_check_hidden_tag($comment) {
     // admins can do what they like
     if( is_admin() )
         return $comment;
-    
+
     // get our options
     $type = $comment['comment_type'];
     $options = wphc_option();
@@ -570,7 +570,7 @@ function wphc_check_hidden_tag($comment) {
             $web_ip = gethostbyname(parse_url($comment['comment_author_url'], PHP_URL_HOST));
             $ipv = $server_ip != $web_ip;
             $spam = $spam || ($ipv);
-            
+
             if($options['logging'] && $ipv) $comment['comment_content'] .= "\n\n[Hashcash Updated] The comment's server IP (".$server_ip.") doesn't match the"
                 . " comment's URL host IP (".$web_ip.") and so is spam.";
         }
@@ -579,30 +579,30 @@ function wphc_check_hidden_tag($comment) {
         if(!$spam && $options['validate-url']){
             if(!class_exists('Snoopy'))
                 require_once( ABSPATH . WPINC . '/class-snoopy.php' );
-                
+
             $permalink = get_permalink($comment['comment_post_ID']);
             $permalink = preg_replace('/\/$/', '', $permalink);
             $snoop = new Snoopy;
-            
+
             if (@$snoop->fetchlinks($comment['comment_author_url'])){
                 $found = false;
-                
+
                 if( !empty( $snoop->results ) )
                 {
                     foreach($snoop->results as $url){
                         $url = preg_replace('/(\/|\/trackback|\/trackback\/)$/', '', $url);
                         if($url == $permalink)
-                            $found = true;    
+                            $found = true;
                     }
                 }
-                
-                if($options['logging'] && !$found) 
+
+                if($options['logging'] && !$found)
                     $comment['comment_content'] .= "\n\n[Hashcash Updated] The comment's actual post text did not contain your blog url (".$permalink.") and so is spam.";
-                
+
                 $spam = $spam || !$found;
             } else {
                 $spam = true;
-                if($options['logging']) 
+                if($options['logging'])
                     $comment['comment_content'] .= "\n\n[Hashcash Updated] Snoopy failed to fetch results for the comment blog url (".$comment['comment_author_url'].") with error '".$snoop->error."' and so is spam.";
             }
         }
@@ -612,11 +612,11 @@ function wphc_check_hidden_tag($comment) {
         if($options['logging'] && $spam)
             $comment['comment_content'] .= "\n\n[Hashcash Updated] The poster sent us '".intval($_POST["wphc_value"])." which is not a hashcash value.";
     }
-    
+
     if($spam){
         $options['comments-spam'] = ((int) $options['comments-spam']) + 1;
         wphc_option($options);
-            
+
         switch($options['moderation']){
             case 'delete':
                 add_filter('comment_post', create_function('$id', 'wp_delete_comment($id); die(\'This comment has been deleted by WP Hashcash\');'));
@@ -633,7 +633,7 @@ function wphc_check_hidden_tag($comment) {
         $options['comments-ham'] = ((int) $options['comments-ham']) + 1;
         wphc_option($options);
     }
-    
+
     return $comment;
 }
 
@@ -641,13 +641,13 @@ function wphc_check_hidden_tag($comment) {
 /**
  *  Add settings link on plugin page
  */
-function wphc_plugin_settings_link($links) { 
-  $settings_link = '<a href="options-general.php?page=wphc_admin">Settings</a>'; 
-  array_unshift($links, $settings_link); 
-  return $links; 
+function wphc_plugin_settings_link($links) {
+  $settings_link = '<a href="options-general.php?page=wphc_admin">Settings</a>';
+  array_unshift($links, $settings_link);
+  return $links;
 }
- 
-$plugin = plugin_basename(__FILE__); 
+
+$plugin = plugin_basename(__FILE__);
 
 add_filter("plugin_action_links_$plugin", 'wphc_plugin_settings_link' );
 
