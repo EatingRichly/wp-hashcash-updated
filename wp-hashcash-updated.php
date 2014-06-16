@@ -4,8 +4,8 @@
  Plugin URI: https://github.com/EatingRichly/wp-hashcash-updated/
  Description: Client-side javascript blocks all spam bots. HTML5 compliant.
  Author: Eric J.
- Author URI: https://twitter.com/wormeyman/
- Version: 5.2.2
+ Author URI: http://eatingrichly.com/about/#Eric
+ Version: 5.3
  Donate link: http://eatingrichly.com
  GitHub Plugin URI: https://github.com/EatingRichly/wp-hashcash-updated/
  GitHub Branch: master
